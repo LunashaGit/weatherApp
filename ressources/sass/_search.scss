@@ -7,3 +7,19 @@
         max-width: 40rem;
     }
 }
+
+.search{
+    &__h1{
+        font-size: 2rem;
+    }
+    &__p{
+        font-size: 1.6rem;
+    }
+    &__input{
+        width: 15rem;
+        height: 1.2rem;
+    }
+    &__button{
+        font-size: 1.2rem;
+    }
+}

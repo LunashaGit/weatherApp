@@ -14,6 +14,20 @@
   max-width: 40rem;
 }
 
+.search__h1 {
+  font-size: 2rem;
+}
+.search__p {
+  font-size: 1.6rem;
+}
+.search__input {
+  width: 15rem;
+  height: 1.2rem;
+}
+.search__button {
+  font-size: 1.2rem;
+}
+
 body {
   width: 100%;
   overflow-x: hidden;
