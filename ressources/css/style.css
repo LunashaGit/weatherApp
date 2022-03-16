@@ -26,11 +26,18 @@
 .search__button {
   font-size: 1.2rem;
 }
+.search h4 {
+  font-size: 1.6rem;
+}
 
 .section__output {
   display: block;
   margin: 0 auto;
   max-width: 40rem;
+}
+
+.output__h2, .output__h3 {
+  font-size: 2rem;
 }
 
 body {
@@ -53,6 +60,13 @@ body {
   * {
     font-size: 90%;
   }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 65rem;
 }
 
 /*# sourceMappingURL=style.css.map */
