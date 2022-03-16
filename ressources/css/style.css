@@ -2,6 +2,38 @@
   padding: 0;
   margin: 0;
   box-sizing: content-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+.section__search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 40rem;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 767px) {
+  * {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  * {
+    font-size: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

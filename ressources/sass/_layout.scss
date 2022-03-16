@@ -1,0 +1,22 @@
+body{
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.main{
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+@media screen and (min-width: 767px){
+    *{
+        font-size: 80%;
+    }
+}
+@media screen and (min-width: 1024px){
+    *{
+        font-size: 90%;
+    }
+}
