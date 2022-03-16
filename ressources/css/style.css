@@ -7,10 +7,8 @@
 }
 
 .section__search {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
   max-width: 40rem;
 }
 
@@ -23,16 +21,15 @@
 .search__input {
   width: 15rem;
   height: 1.2rem;
+  font-size: 1.2rem;
 }
 .search__button {
   font-size: 1.2rem;
 }
 
 .section__output {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
   max-width: 40rem;
 }
 
