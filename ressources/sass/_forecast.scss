@@ -1,0 +1,20 @@
+.section{
+    &__forecast{
+        display: block;
+        margin: 0 auto;
+        max-width: 100rem;
+    }
+}
+.forecast{
+    visibility: hidden;
+    display: flex;
+
+    &__div{
+        display: inline;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    &__h2, &__h3{
+        font-size: 1rem;
+    }
+}

@@ -17,6 +17,15 @@
         width: 15rem;
         height: 1.2rem;
         font-size: 1.2rem;
+        font-family: inherit;
+        border: 0;
+        border-bottom: 2px solid grey;
+        outline: 0;
+        font-size: 1.3rem;
+        color: white;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
     }
     &__button{
         font-size: 1.2rem;

@@ -23,6 +23,15 @@
   width: 15rem;
   height: 1.2rem;
   font-size: 1.2rem;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid grey;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
 }
 .search__button {
   font-size: 1.2rem;
@@ -78,10 +87,38 @@ body {
   padding: 1rem;
   border-radius: 1%;
   color: white;
-  width: 20rem;
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.section__forecast {
+  display: block;
+  margin: 0 auto;
+  max-width: 100rem;
+}
+
+.forecast {
+  visibility: hidden;
+  display: flex;
+}
+.forecast__div {
+  display: inline;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.forecast__h2, .forecast__h3 {
+  font-size: 1rem;
+}
+
+.forecast {
+  visibility: hidden;
+}
+.forecast div {
+  display: inline;
+}
+.forecast__h2, .forecast__h3 {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
