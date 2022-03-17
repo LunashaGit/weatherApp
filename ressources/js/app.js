@@ -6,9 +6,10 @@ document.getElementById('input').onkeyup = function(event){
 }
 
 async function appUp(){
+    let erreur = document.querySelectorAll('h4')[0]
     try{
         let tc = document.getElementById('input').value;
-        let key = '0da0646afb285a4f7697ca7f0acae0bb';
+        let key = '2bf66eb43d13cb71776d39baf8cfb06c';
         let city = tc;
         let weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric&mode=json&lang=fr`);
         let objects = weather.json();
@@ -18,7 +19,7 @@ async function appUp(){
 
         objects.then((arrays) => {
             try{
-                document.querySelectorAll('h4')[0].style.visibility = 'hidden';
+                erreur.style.visibility = 'hidden';
                 output.style.visibility = 'visible';
                 output.insertAdjacentHTML('afterbegin', `
                     <h2 class="output__h2">${city.charAt(0).toUpperCase() + city.slice(1).toLowerCase()}, ${arrays.sys.country}</h2>
@@ -31,9 +32,9 @@ async function appUp(){
             }
             catch(err){
                 document.querySelector('.output').style.visibility = 'hidden';
-                document.querySelectorAll('h4')[0].style.visibility = 'visible';
-                document.querySelectorAll('h4')[0].style.color = 'red'
-                document.querySelectorAll('h4')[0].innerText = "This town doesn't exist";
+                erreur.style.visibility = 'visible';
+                erreur.style.color = 'red'
+                erreur.innerText = "This town doesn't exist";
             }
         })
         
@@ -46,7 +47,7 @@ async function appUp(){
             try{
                 let j = 32;
                 for(let i = 0; i <= 32; i += 8, j -= 8){
-                        document.querySelectorAll('h4')[0].style.visibility = 'hidden';
+                        erreur.style.visibility = 'hidden';
                         forecastSec.style.visibility = 'visible';
                             forecastSec.insertAdjacentHTML('afterbegin', `
                             <div class="forecast__div">
@@ -63,17 +64,19 @@ async function appUp(){
             }
             catch(err){
                 document.querySelector('.output').style.visibility = 'hidden';
-                document.querySelectorAll('h4')[0].style.visibility = 'visible';
-                document.querySelectorAll('h4')[0].style.color = 'red'
-                document.querySelectorAll('h4')[0].innerText = "This town doesn't exist";
+                forecastSec.style.visibility = 'hidden';
+                erreur.style.visibility = 'visible';
+                erreur.style.color = 'red'
+                erreur.innerText = "This town doesn't exist";
                 console.log(err)
             }
         })
     }
     catch(err){
+        forecastSec.style.visibility = 'hidden';
         document.querySelector('.output').style.visibility = 'hidden';
-        document.querySelectorAll('h4')[0].style.visibility = 'visible';
-        document.querySelectorAll('h4')[0].style.color = 'red'
-        document.querySelectorAll('h4')[0].innerText = "I can't communicate with the API";
+        erreur.style.visibility = 'visible';
+        erreur.style.color = 'red'
+        erreur.innerText = "I can't communicate with the API";
         console.log(err)
 }}
