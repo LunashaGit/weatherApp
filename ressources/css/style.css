@@ -37,6 +37,9 @@
   max-width: 40rem;
 }
 
+.output {
+  visibility: hidden;
+}
 .output__h2, .output__h3 {
   font-size: 2rem;
 }

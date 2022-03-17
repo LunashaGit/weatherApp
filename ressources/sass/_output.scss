@@ -6,6 +6,7 @@
     }
 }
 .output{
+    visibility: hidden;
     &__h2, &__h3{
         font-size: 2rem;
     }
