@@ -9,7 +9,7 @@ async function appUp(){
     let erreur = document.querySelectorAll('h4')[0]
     try{
         let tc = document.getElementById('input').value;
-        let key = '2bf66eb43d13cb71776d39baf8cfb06c';
+        let key = '0da0646afb285a4f7697ca7f0acae0bb';
         let city = tc;
         let weather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric&mode=json&lang=fr`);
         let objects = weather.json();
