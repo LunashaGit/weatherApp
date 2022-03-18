@@ -5,12 +5,4 @@
 @import '_main.scss';
 @import '_font.scss';
 @import '_forecast.scss';
-.forecast{
-    visibility: hidden;
-    div{
-        display: inline;
-    }
-    &__h2, &__h3{
-        font-size: 2rem;
-    }
-}
+@import '_nav.scss';

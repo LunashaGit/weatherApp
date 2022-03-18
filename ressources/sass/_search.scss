@@ -7,6 +7,8 @@
 }
 
 .search{
+    display: flex;
+    flex-direction: column;
     &__h1{
         font-size: 2rem;
     }
@@ -22,10 +24,11 @@
         border-bottom: 2px solid grey;
         outline: 0;
         font-size: 1.3rem;
-        color: white;
+        color: black;
         padding: 7px 0;
-        background: transparent;
+        background: white;
         transition: border-color 0.2s;
+        margin-bottom: 2rem;
     }
     &__button{
         font-size: 1.2rem;

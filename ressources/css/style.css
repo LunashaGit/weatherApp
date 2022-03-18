@@ -13,6 +13,10 @@
   max-width: 40rem;
 }
 
+.search {
+  display: flex;
+  flex-direction: column;
+}
 .search__h1 {
   font-size: 2rem;
 }
@@ -28,10 +32,11 @@
   border-bottom: 2px solid grey;
   outline: 0;
   font-size: 1.3rem;
-  color: white;
+  color: black;
   padding: 7px 0;
-  background: transparent;
+  background: white;
   transition: border-color 0.2s;
+  margin-bottom: 2rem;
 }
 .search__button {
   font-size: 1.2rem;
@@ -47,10 +52,16 @@
 }
 
 .output {
+  display: flex;
   visibility: hidden;
 }
 .output__h2, .output__h3 {
   font-size: 2rem;
+}
+.output__div {
+  display: inline;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 body {
@@ -80,7 +91,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 65rem;
 }
 .main section {
   background-color: #444444;
@@ -93,7 +103,8 @@ body {
 }
 
 .section__forecast {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 100rem;
 }
@@ -102,22 +113,27 @@ body {
   visibility: hidden;
   display: flex;
 }
+.forecast__comparediv {
+  display: flex;
+  margin: 1rem auto;
+  justify-content: space-around;
+  width: 90rem;
+  background-color: #444444;
+  padding: 1rem;
+  border-radius: 1%;
+  color: white;
+  text-align: center;
+}
 .forecast__div {
-  display: inline;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 1rem;
 }
 .forecast__h2, .forecast__h3 {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
-.forecast {
-  visibility: hidden;
-}
-.forecast div {
+.link__li {
   display: inline;
-}
-.forecast__h2, .forecast__h3 {
+  text-decoration: none;
   font-size: 2rem;
 }
 

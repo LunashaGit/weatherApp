@@ -6,8 +6,14 @@
     }
 }
 .output{
+    display: flex;
     visibility: hidden;
     &__h2, &__h3{
         font-size: 2rem;
+    }
+    &__div{
+        display: inline;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
