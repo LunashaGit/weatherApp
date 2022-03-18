@@ -17,7 +17,6 @@ async function appUp(){
         let weatherCompare = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityCompare}&appid=${key}&units=metric&mode=json&lang=fr`);
         let objects = weather.json();
         let objectsCompare = weatherCompare.json();
-        console.log(objects)
         let output = document.querySelector('section.output')
         output.innerHTML = "";
 
@@ -85,7 +84,7 @@ async function appUp(){
         let forecastSecCompare = document.querySelectorAll('.comparediv')[1];
         forecastSec.innerHTML ="";
         forecastSecCompare.innerHTML ="";
-       
+        
         call.then((arrays) => {
             try{
                 let j = 32;
