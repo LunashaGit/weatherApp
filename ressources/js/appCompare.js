@@ -143,7 +143,6 @@ async function appUp(){
                 document.querySelectorAll('.comparediv')[1].style.visibility = 'hidden';
                 document.querySelector('.output').style.visibility = 'hidden';
                 forecastSec.style.visibility = 'hidden';
-                document.querySelectorAll('.comparediv')[1].style.visibility = 'hidden';
                 erreur.style.visibility = 'visible';
                 erreur.style.color = 'red'
                 if(document.getElementById('input').innerText == "" || document.getElementById('input_compare').innerText == ""){

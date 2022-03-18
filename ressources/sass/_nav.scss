@@ -1,7 +1,15 @@
 .link{
+    &__ul{
+        margin: 2rem;
+    }
     &__li{
         display: inline;
         text-decoration: none;
-        font-size: 2rem;
+        font-size: 3rem;
+        margin: 0 1rem;
+        padding: 0.3rem;
+        background-color: wheat;
+        border-radius: 5%;
+        text-decoration: none;
     }
 }

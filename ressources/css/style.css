@@ -45,6 +45,34 @@
   font-size: 1.6rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .search__h1 {
+    font-size: 3rem;
+  }
+  .search__p {
+    font-size: 2rem;
+  }
+  .search__input {
+    width: 20rem;
+    height: 1.2rem;
+    font-size: 2rem;
+    font-family: inherit;
+    border: 0;
+    border-bottom: 2px solid grey;
+    outline: 0;
+    color: black;
+    padding: 7px 0;
+    background: white;
+    transition: border-color 0.2s;
+    margin-bottom: 2rem;
+  }
+  .search__button {
+    font-size: 2rem;
+  }
+  .search h4 {
+    font-size: 1.6rem;
+  }
+}
 .section__output {
   display: block;
   margin: 0 auto;
@@ -53,6 +81,7 @@
 
 .output {
   display: flex;
+  flex-direction: column;
   visibility: hidden;
 }
 .output__h2, .output__h3 {
@@ -64,33 +93,49 @@
   margin-right: 1rem;
 }
 
-#myChart {
-  height: 40rem;
-  width: 80rem;
+@media screen and (min-width: 1024px) {
+  .output {
+    flex-direction: row;
+  }
+  .output__h2, .output__h3 {
+    font-size: 3rem;
+  }
+  .output__div {
+    display: inline;
+    margin: 0 1rem;
+  }
 }
-
 body {
   width: 100%;
   overflow-x: hidden;
   height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .main {
   position: relative;
   margin: 0 auto;
   font-family: "Fabiolo", sans-serif;
 }
 
-@media screen and (min-width: 767px) {
-  * {
-    font-size: 80%;
-  }
+#myChart {
+  background-color: white;
+  visibility: hidden;
 }
-@media screen and (min-width: 1024px) {
-  * {
-    font-size: 90%;
-  }
-}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -122,7 +167,7 @@ body {
   display: flex;
   margin: 1rem auto;
   justify-content: space-around;
-  width: 90rem;
+  flex-direction: column;
   background-color: #444444;
   padding: 1rem;
   border-radius: 1%;
@@ -136,10 +181,24 @@ body {
   font-size: 2rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .forecast__comparediv {
+    flex-direction: row;
+    width: 90rem;
+  }
+}
+.link__ul {
+  margin: 2rem;
+}
 .link__li {
   display: inline;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
+  margin: 0 1rem;
+  padding: 0.3rem;
+  background-color: wheat;
+  border-radius: 5%;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

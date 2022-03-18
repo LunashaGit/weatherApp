@@ -8,6 +8,7 @@ document.getElementById('input').onkeyup = function(event){
 
 async function appUp(){
     let erreur = document.querySelectorAll('h4')[0]
+    document.querySelector('#myChart').style.visibility = "visible"
     try{
         let tc = document.getElementById('input').value;
         let key = '0da0646afb285a4f7697ca7f0acae0bb';
