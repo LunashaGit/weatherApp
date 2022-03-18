@@ -13,6 +13,8 @@ document.querySelectorAll('input')[1].onkeyup = function(event){
 
 
 async function appUp(){
+    let erreur = document.querySelectorAll('h4')[0]
+
     try{ //Try -> If it can't -> Catch
 
 
@@ -32,22 +34,56 @@ async function appUp(){
         let objects = weather.json();
         let objectsCompare = weatherCompare.json();
         let call = forecast.json()
-        let callCompare = forecastCompare.json()
+        let callCompare = forecastCompare.json();
         // All JSON file after a request to the API
 
         let output = document.querySelector('section.output')
         let forecastSec = document.querySelectorAll('.comparediv')[0];
         let forecastSecCompare = document.querySelectorAll('.comparediv')[1];
-        let erreur = document.querySelectorAll('h4')[0]
         
-
-    
         output.innerHTML = "";
         forecastSec.innerHTML ="";
         forecastSecCompare.innerHTML ="";
         // Blank the Block after touch the button or enter Key 
         
+        Promise.all([call, callCompare]).then((arrays) =>{
+            document.getElementById('myChart').style.visibility = "visible"
+                const labels = [
+                    'In 1 day',
+                    'In 2 days',
+                    'In 3 days',
+                    'In 4 days',
+                    'In 5 days',
+                    ];
+                    const data = {
+                    labels: labels,
+                    datasets: [
+                        {
+                        label: arrays[0].city.name + '°C',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [arrays[0].list[0].main.temp, arrays[0].list[8].main.temp, arrays[0].list[16].main.temp, arrays[0].list[24].main.temp, arrays[0].list[32].main.temp], 
+                    },{
+                        label: arrays[1].city.name + '°C',
+                        backgroundColor: 'rgb(100, 255, 132)',
+                        borderColor: 'rgb(100, 255, 132)',
+                        data: [arrays[1].list[0].main.temp, arrays[1].list[8].main.temp, arrays[1].list[16].main.temp, arrays[1].list[24].main.temp, arrays[1].list[32].main.temp], 
+                    }
+                ]
+                    };
+                    const config = {
+                        type: 'line',
+                        data: data,
+                        options: {}
+                        };
+                    const myChart = new Chart(
+                    document.getElementById('myChart'),
+                    config
+                    );
+        })
+        //Graph Canva
 
+        
         function listWeather(element, cityName){
             element.then((arrays) => {
                 try{
@@ -117,7 +153,6 @@ async function appUp(){
             })
         }
         // Give the Meteo for 5 days -> For 2 town ! 
-
 
         listWeather(objects, city);
         listWeather(objectsCompare, cityCompare);
