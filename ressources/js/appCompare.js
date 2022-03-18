@@ -39,7 +39,7 @@ async function appUp(){
         let forecastSec = document.querySelectorAll('.comparediv')[0];
         let forecastSecCompare = document.querySelectorAll('.comparediv')[1];
         let erreur = document.querySelectorAll('h4')[0]
-
+        
 
     
         output.innerHTML = "";
