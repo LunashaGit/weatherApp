@@ -38,8 +38,8 @@ async function appUp(){
         
         function graph(one, two, three, four, five){
             let canvaChart = document.querySelector('#canvaChart')
-            canvaChart.innerHTML = "";
             let chart = document.createElement('canvas')
+            canvaChart.innerHTML = "";
             chart.setAttribute('id', 'myChart')
             chart.style.visibility = "visible"
             canvaChart.appendChild(chart)

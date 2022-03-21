@@ -48,8 +48,8 @@ async function appUp(){
         
         Promise.all([call, callCompare]).then((arrays) =>{
             let canvaChart = document.querySelector('#canvaChart')
-            canvaChart.innerHTML = "";
             let chart = document.createElement('canvas')
+            canvaChart.innerHTML = "";
             chart.setAttribute('id', 'myChart')
             chart.style.visibility = "visible"
             canvaChart.appendChild(chart)
