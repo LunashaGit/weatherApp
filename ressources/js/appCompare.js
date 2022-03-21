@@ -47,7 +47,12 @@ async function appUp(){
         // Blank the Block after touch the button or enter Key 
         
         Promise.all([call, callCompare]).then((arrays) =>{
-            document.getElementById('myChart').style.visibility = "visible"
+            let canvaChart = document.querySelector('#canvaChart')
+            canvaChart.innerHTML = "";
+            let chart = document.createElement('canvas')
+            chart.setAttribute('id', 'myChart')
+            chart.style.visibility = "visible"
+            canvaChart.appendChild(chart)
                 const labels = [
                     'In 1 day',
                     'In 2 days',
@@ -77,7 +82,7 @@ async function appUp(){
                         options: {}
                         };
                     const myChart = new Chart(
-                    document.getElementById('myChart'),
+                    chart,
                     config
                     );
         })

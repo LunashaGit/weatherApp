@@ -35,9 +35,14 @@ async function appUp(){
 
         document.querySelector('#myChart').style.visibility = "visible"
 
-
+        
         function graph(one, two, three, four, five){
-            let chart = document.getElementById('myChart')
+            let canvaChart = document.querySelector('#canvaChart')
+            canvaChart.innerHTML = "";
+            let chart = document.createElement('canvas')
+            chart.setAttribute('id', 'myChart')
+            chart.style.visibility = "visible"
+            canvaChart.appendChild(chart)
                 const labels = [
                     'In 1 day',
                     'In 2 days',
@@ -59,10 +64,14 @@ async function appUp(){
                         data: data,
                         options: {}
                         };
-                    const myChart = new Chart(
+                    
+                    myChart = new Chart(
                     chart,
                     config
                     );
+                    
+                    
+                    
         }
         //function Canva Graph
 
