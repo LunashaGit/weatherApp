@@ -1,0 +1,50 @@
+.header{
+    background: url(./../images/f53d3f8a2b09f6431df49140c39ba639.jpg) bottom center/cover;
+    height: 35vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    box-shadow: 0.1rem 0.1rem 1rem $shadow;
+    &__art{
+        height: 100%;
+        @include introMob;
+        @include fColEnd;
+    }
+    &__h1{
+        font-size: 4rem;
+        @include fColCenter;
+        color: $white;
+        text-shadow: 0.3rem 0.3rem 0.3rem $grey;
+    }
+    &__ico{
+        font-size: 4rem;
+        color: $white;
+        text-shadow: 0.3rem 0.3rem 0.3rem $grey;
+        margin-bottom: 0.5rem;
+    }
+}
+@media screen and (min-width: 767px){
+    .header{
+        background-position: bottom -5rem right 0rem;
+        &__art{
+            @include introTab;
+            padding-bottom: 0;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .header{
+        background-position: top -4rem right 0rem;
+        left: 50%;
+        transform: translateX(-50%);
+        @include introDesk;
+        border-radius: 0 0 0.5rem 0.5rem;
+        height: 30rem;
+        &__art{
+            @include introDesk;
+            padding-bottom: 1rem;
+            margin-right: 4rem;
+            align-items: flex-end;
+        }
+    }
+}

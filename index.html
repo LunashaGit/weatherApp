@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WeatherApp">
+    <meta name="keywords" content="HTML, CSS, SASS, JS">
+    <meta name="author" content="SashBFa Luna">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="shortcut icon" href="./assets/images/sun-icon-31.png">
+
+    <title>WeatherApp</title>
+</head>
+
+<body>
+    <header class="header">
+        <article class="header__art">
+            <h1 class="header__h1"><i class="fa-solid fa-cloud-sun header__ico"></i> WeatherApp</h1>
+            <nav class="nav">
+                <a class="nav__link" href="index.html">
+                    <button class="button nav__button nav__button--home">Reset</button>
+                </a>
+                <a class="nav__link" href="./pages/compare.html">
+                    <button class="button nav__button nav__button--compare">Compare</button>
+                </a>
+            </nav>
+        </article>
+    </header>
+
+    <main class="main">
+        <section class="search">
+            <article class="search__art">
+                <h2 class="search__h2">Choose a city</h2>
+                <input id="input" class="search__input" autocomplete="off" />
+                <button id="button" class="button search__button">Search</button>
+                <h4 class="search__h4"></h4>
+            </article>
+        </section>
+
+        <section class="output"></section>
+
+        <section class="forecast"></section>
+
+        <section id="canvaChart">
+            <canvas id="myChart" style="width:200px; height:200px"></canvas>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

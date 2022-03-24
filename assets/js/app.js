@@ -24,9 +24,9 @@ async function appUp(){
         let call = forecast.json()
         // All JSON file after a request to the API
 
-        let forecastSec = document.querySelector('.comparediv')
-        let output = document.querySelector('section.output')
-        let erreur = document.querySelectorAll('h4')[0]
+        let forecastSec = document.querySelector('.forecast')
+        let output = document.querySelector('.output')
+        let erreur = document.querySelectorAll('.search__h4')[0]
         //Variables
         
         forecastSec.innerHTML ="";
@@ -81,14 +81,14 @@ async function appUp(){
                     erreur.style.visibility = 'hidden';
                     output.style.visibility = 'visible';
                     output.insertAdjacentHTML('afterbegin', `
-                        <div>
+                        <article class="output__art">
                             <h2 class="output__h2">${city.charAt(0).toUpperCase() + city.slice(1).toLowerCase()}, ${arrays.sys.country}</h2>
-                            <img src="http://openweathermap.org/img/wn/${arrays.weather[0].icon}.png">
+                            <img class="output__img" src="http://openweathermap.org/img/wn/${arrays.weather[0].icon}.png">
                             <h3 class="output__h3">Humidity : ${arrays.main.humidity}%</h3>
                             <h3 class="output__h3">Weather : ${arrays.weather[0].main}</h3>
                             <h3 class="output__h3">Temp : ${Math.floor(Math.ceil(arrays.main.temp))} °C</h3>
                             <h3 class="output__h3">Min : ${Math.floor(Math.ceil(arrays.main.temp_min))}°C Max : ${Math.floor(Math.ceil(arrays.main.temp_max))}°C</h3>
-                        </div>
+                        </article>
                          ` )
                 }
                 catch(err){
@@ -110,15 +110,14 @@ async function appUp(){
                             erreur.style.visibility = 'hidden';
                             forecastSec.style.visibility = 'visible';
                                 forecastSec.insertAdjacentHTML('afterbegin', `
-                                <div class="forecast__div">
+                                <article class="forecast__art">
                                     <h2 class="forecast__h2">In ${(j/8)+1} Days</h2>
-                                    <h2 class="forecast__h2">${city.charAt(0).toUpperCase() + city.slice(1).toLowerCase()}, ${arrays.city.country}</h2>
-                                    <img src="http://openweathermap.org/img/wn/${arrays.list[i].weather[0].icon}.png">
+                                    <img class="forecast__img" src="http://openweathermap.org/img/wn/${arrays.list[i].weather[0].icon}.png">
                                     <h3 class="forecast__h3">Humidity : ${arrays.list[i].main.humidity}%</h3>
                                     <h3 class="forecast__h3">Weather : ${arrays.list[i].weather[0].main}</h3>
                                     <h3 class="forecast__h3">Temp : ${Math.floor(Math.ceil(arrays.list[i].main.temp))} °C</h3>
                                     <h3 class="forecast__h3">Min : ${Math.floor(Math.ceil(arrays.list[i].main.temp_min))}°C Max : ${Math.floor(Math.ceil(arrays.list[i].main.temp_max))}°C</h3>
-                                </div>
+                                </article>
                             ` )
                     }
                 }

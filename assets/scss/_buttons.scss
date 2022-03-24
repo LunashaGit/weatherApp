@@ -1,0 +1,16 @@
+.button{
+    width: 10rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    background-color: $white3;
+    background-image: -webkit-linear-gradient( left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05) ), url(../../assets/images/overlay.png);
+    color: $white;
+    border: 0.1rem solid $white;
+    cursor: pointer;
+    margin: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 1rem $shadow;
+    &:hover{
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,56 @@
+.search{
+    padding: 1rem 2rem 0.5rem 2rem;
+    position: fixed;
+    top: 35vh;
+    &__art{
+        @include introMob;
+        @include fColCenter;
+        box-shadow: 0.3rem 0.3rem 0.3rem $shadow;
+        border-radius: 0.5rem;
+        background-color: $blueLightPastel;
+        background-image: -webkit-linear-gradient( top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.05) ), url(../../assets/images/overlay.png);
+    }
+    &__h2{
+        font-size: 3rem;
+        text-shadow: 0.1rem 0.1rem 0rem $shadow;
+    }
+    &__input{
+        height: 3rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        font-size: 2rem;
+        padding-left: 1rem;
+        border: 0.1rem solid $white;
+        background-color: $white2;
+        box-shadow: 0.1rem 0.1rem 1rem $shadow;
+    }
+    &__button{
+        color: $grey;
+        margin: 1.5rem auto;
+    }
+    &__h4{
+        font-size: 2rem;
+    }
+}
+@media screen and (min-width: 767px){
+    .search{
+        padding: 1rem auto;
+        background-color: transparent;
+        &__art{
+            @include introTab;
+            width: 50vw;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .search{
+        top: 15rem;
+        left: 50%;
+        transform: translateX(-90%);
+        &__art{
+            @include introDesk;
+            width: 30rem;
+            padding: 3rem;
+        }
+    }
+}

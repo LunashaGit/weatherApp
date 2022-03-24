@@ -1,0 +1,41 @@
+@mixin introMob{
+	max-width: 320px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+@mixin introTab{
+	max-width: 767px;
+	margin: 0 auto;
+	padding: 4rem;
+}
+@mixin introDesk{
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0rem;
+}
+
+
+@mixin fColCenter{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+@mixin fColSeen{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+@mixin fColEnd{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
+}
